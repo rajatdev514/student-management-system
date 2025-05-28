@@ -1,0 +1,83 @@
+.student-form-container {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background-color: #dbf3fa;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  color: #333333;
+  border: 1px solid #e0e0e0;
+}
+
+.student-form-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #1d587f;
+}
+
+.student-form-input {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 1rem;
+  transition: border 0.2s ease;
+}
+
+.student-form-input:focus {
+  outline: none;
+  border: 1px solid #10364f;
+  background-color: #ffffff;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.student-form-button {
+  width: 80%;
+  padding: 12px;
+  background-color: #1d587f;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.student-form-button:hover {
+  background-color: #13415e;
+}
+
+.student-form-button-logout {
+  width: 30%;
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: #195d8a;
+  border: 2px solid red;
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 10px auto;
+}
+
+.student-form-button-logout:hover {
+  background-color: #051b29;
+  color: white;
+}
+
+.email-disabled {
+  color: #7a7a7a;
+}
