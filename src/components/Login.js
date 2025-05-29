@@ -68,6 +68,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
+      <h1>Welcome to Student Management App</h1>
       <form onSubmit={handleLogin} className="login-form">
         <h2 className="login-heading">Login</h2>
         <input

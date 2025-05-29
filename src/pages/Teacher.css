@@ -1,63 +1,100 @@
+/* Teacher Dashboard Styling - Futuristic Glass Look */
 .teacher-dashboard {
-  padding: 40px;
-  background-color: #f9f9f9;
+  padding: 50px 20px;
   min-height: 100vh;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #c9e7ff, #e3f2fd, #ffffff);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .teacher-dashboard h2 {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #1f2e47;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
 }
 
 .teacher-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
 }
 
 .teacher-card {
-  background: linear-gradient(135deg, #ffffff, #f0f8ff);
-  border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 12px;
-  width: 220px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 20px 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(12px);
+  color: #2a2a2a;
+  position: relative;
+  overflow: hidden;
 }
 
-.teacher-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.teacher-card::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+  z-index: 0;
+  opacity: 0.7;
 }
 
 .teacher-card h4 {
   margin: 0 0 10px;
-  color: #34495e;
+  color: #09375d;
+  font-size: 1.2rem;
+  z-index: 1;
+  position: relative;
 }
 
 .teacher-card p {
-  margin: 6px 0;
-  font-size: 14px;
-  color: #555;
+  margin: 5px 0;
+  font-size: 0.95rem;
+  color: #333;
+  z-index: 1;
+  position: relative;
 }
 
 .teacher-card strong {
-  color: #2c3e50;
+  color: #0a3354;
+}
+
+.teacher-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 .teacher-logout-button {
-  width: 10%;
-  padding: 10px;
-  margin-top: 2rem;
-  background-color: #195d8a;
-  border: 2px solid red;
-  border-radius: 6px;
-  color: rgb(255, 255, 255);
+  margin-top: 40px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #ef5350, #d32f2f);
+  color: white;
+  font-weight: bold;
   font-size: 1rem;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
-  display: block;
-  margin: 10px auto;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.teacher-logout-button:hover {
+  background: linear-gradient(to right, #d32f2f, #b71c1c);
+  transform: scale(1.05);
 }
